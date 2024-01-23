@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ForestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::get('/bebras/miskinis/{color}/{size}', [ForestController::class, 'labas']);
+
+
+Route::get('/zebras', function () {
+    return 'Labas Zebrai';
 });
